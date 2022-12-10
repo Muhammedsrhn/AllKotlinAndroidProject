@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/userText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="User Email"
+        android:textSize="22sp"
+        android:layout_margin="5dp"
+        android:textColor="#000000"
+        />
+
+    <ImageView
+        android:id="@+id/userImage"
+        android:layout_width="243dp"
+        android:layout_height="159dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/img" />
+
+    <TextView
+        android:id="@+id/userComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="User Comment"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:layout_margin="7dp"
+        android:layout_marginBottom="12dp"
+
+        />
+
+</LinearLayout>

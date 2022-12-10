@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.BesinDetayiFragment">
+
+
+        <ImageView
+            android:id="@+id/besinImage"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="37dp"
+            android:layout_marginEnd="57dp"
+            android:layout_marginBottom="10dp"
+            android:minHeight="200dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/besinName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Besin Kalori"
+            android:layout_below="@+id/besinImage"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_margin="7dp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:id="@+id/besinKalori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Besin Kalori"
+            android:layout_below="@+id/besinName"
+            android:textSize="18sp"
+            android:layout_margin="7dp"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:id="@+id/besinKarbonhidrat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Besin Kalori"
+            android:layout_below="@+id/besinKalori"
+            android:textSize="18sp"
+            android:layout_margin="7dp"
+            android:layout_centerHorizontal="true"
+            />
+   <TextView
+            android:id="@+id/besinProtein"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Besin Kalori"
+            android:layout_below="@+id/besinKarbonhidrat"
+            android:textSize="18sp"
+            android:layout_margin="7dp"
+            android:layout_centerHorizontal="true"
+            />
+   <TextView
+            android:id="@+id/besinYag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Besin Kalori"
+            android:layout_below="@+id/besinProtein"
+            android:textSize="18sp"
+            android:layout_margin="7dp"
+            android:layout_centerHorizontal="true"
+            />
+
+
+    </RelativeLayout>
+</layout>

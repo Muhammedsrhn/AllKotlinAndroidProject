@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="country"
+            type="com.udemy.countrylistudemy.model.Country" />
+
+        <variable
+            name="listener"
+            type="com.udemy.countrylistudemy.adapter.ClickListener" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{listener::onItemClick}"
+        android:orientation="horizontal"
+        tools:ignore="ExtraText">
+
+        /*
+        uuidler textlere geliyor burdan custom item clik listenera cekip ordan action argument
+        olarak gonderiyoruz
+        */
+
+        <TextView
+            android:id="@+id/uuid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(country.uuid)}"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/feedImage"
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_margin="12dp"
+            android:layout_weight="2"
+            android:ImageDownload="@{country.countryFlag}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_launcher_background"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="29dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical"
+
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/feedCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@{country.countryName}"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/feedContinet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@{country.countryRegion}"
+                android:textSize="19dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

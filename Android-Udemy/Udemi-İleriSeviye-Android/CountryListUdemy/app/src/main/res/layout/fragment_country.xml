@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="country"
+            type="com.udemy.countrylistudemy.model.Country" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.CountryFragment">
+
+        <ImageView
+            android:id="@+id/flag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="25dp"
+            android:minHeight="200dp"
+            android:ImageDownload="@{country.countryFlag}"
+            android:scaleType="fitCenter"
+             />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/flag"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:text="@{country.countryName}"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/capital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:text="@{country.countryCapital}"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/region"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/capital"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:text="@{country.countryRegion}"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/region"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:text="@{country.countryCurrency}"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/laguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/currency"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:text="@{country.countryLanguage}"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</layout>
